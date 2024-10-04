@@ -1,7 +1,11 @@
+
 <div class="container">
+
     <!-- Outer Row -->
     <div class="row justify-content-center">
+
         <div class="col-lg-7">
+
             <div class="card o-hidden border-0 shadow-lg my-5">
                 <div class="card-body p-0">
                     <!-- Nested Row within Card Body -->
@@ -27,9 +31,6 @@
                                 </form>
                                 <hr>
                                 <div class="text-center">
-                                    <a class="small" href="<?= base_url('autentifikasi/lupaPassword'); ?>">Lupa Password?</a>
-                                </div>
-                                <div class="text-center">
                                     <a class="small" href="<?= base_url('autentifikasi/registrasi'); ?>">Daftar Member!</a>
                                 </div>
                             </div>
@@ -37,6 +38,9 @@
                     </div>
                 </div>
             </div>
+
         </div>
+
     </div>
+
 </div>

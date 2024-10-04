@@ -1,29 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initialscale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>pustaka-booking | <?= $judul; ?></title>
-    <!-- Custom fonts for this template-->
-    <link href="<?= base_url('assets/'); ?>vendor/fontawesomefree/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="<?= base_url('assets/'); ?>datatable/datatables.css"
-        rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="<?= base_url('assets/');
-                                        ?>datatable/jquery.dataTables.js'; ?>"></script>
-    <script type="text/javascript" src="<?= base_url('assets/');
-                                        ?>datatable/datatables.js'; ?>"></script>
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,30
-0i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    <!-- Custom styles for this template-->
-    <link href="<?= base_url('assets/'); ?>css/sb-admin-2.min.css"
-        rel="stylesheet">
+	<title>Dashboard - Aplikasi Perpustakaan</title>
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url().'assets/css/bootstrap.css' ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url().'assets/datatable/datatables.css' ?>">
+	<script type="text/javascript" src="<?php echo base_url().'assets/js/jquery.js'; ?>"></script>
+	<script type="text/javascript" src="<?php echo base_url().'assets/js/bootstrap.js'; ?>"></script>
+	<script type="text/javascript" src="<?php echo base_url().'assets/datatable/jquery.dataTables.js'; ?>"></script>
+	<script type="text/javascript" src="<?php echo base_url().'assets/datatable/datatables.js'; ?>"></script>
 </head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-togglecollapsed" data-toggle="collapse" data-target="#bs-example-navbarcollapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="<?php echo base_url().'admin'; ?>">Perpustakaan</a>
+			</div>
 
-<body id="page-top">
-    <!-- Page Wrapper -->
-    <div id="wrapper"></div>
+			<div class="collapse navbar-collapse" id="bs-examplenavbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="<?php echo base_url().'admin'; ?>"><span class="glyphicon glyphicon-home"></span> Dashboard <span class="sronly">(current)</span></a></li>
+					<li><a href="<?php echo base_url().'buku'; ?>"><span class="glyphicon glyphicon-folder-open"></span> Data Buku</a></li>
+					<li><a href="<?php echo base_url().'anggota'; ?>"><span class="glyphicon glyphicon-user"></span> Data Anggota</a></li>
+					<li><a href="<?php echo base_url().'peminjaman'; ?>"><span class="glyphicon glyphicon-sort"></span> Transaksi Peminjaman</a></li>
+					<li><a href="<?php echo base_url().'laporan'; ?>"><span class="glyphicon glyphicon-list-alt"></span> Laporan</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="<?php echo base_url().'admin/logout'; ?>"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" ariaexpanded="false"><?php echo "Halo, <b>".$this->session->userdata('nama');?></b> <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="<?php echo base_url().'admin/ganti_password' ?>"><i class="glyphicon glyphicon-lock"></i> Ganti Password</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+	<div class="container">
